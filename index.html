@@ -45,7 +45,7 @@
         <!-- Navbar -->
         <nav>
             <div class="navbar flex justify-between container mx-auto bg-[#F85559] rounded-full mt-12 px-12">
-                <div>
+                <div class="hidden lg:block">
                     <a class="btn btn-ghost normal-case text-lg text-white font-medium">Home</a>
                     <a class="btn btn-ghost normal-case text-lg  text-white font-medium">About Us</a>
                     <a class="btn btn-ghost normal-case text-lg  text-white font-medium">Shop</a>
@@ -55,15 +55,31 @@
                     <img src="./images/logo.png" alt="">
                     <h2 class="text-4xl font-bold text-white">Fruit Burst</h2>
                 </div>
-                <div class="gap-2">
-                    <div class="form-control relative py-4">
-                        <input type="text" placeholder="Search Here"
-                            class="input input-bordered rounded-full h-8 w-24 md:w-96" />
-                        <div>
-                            <img class="absolute bottom-5 left-80" src="./images/search.png" alt="">
-                        </div>
+                <div class="flex-none gap-2">
+                    <div class="form-control lg:block hidden">
+                      <div class="flex">
+                        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto rounded-full" />
+                      <img class="relative right-10" src="./images/search.png" alt="">
+                      </div>
                     </div>
-                </div>
+                    <div class="dropdown dropdown-end">
+                      <label tabindex="0" class="btn btn-ghost btn-circle avatar lg:hidden">
+                        <div class="w-10 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                        </div>
+                      </label>
+                      <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>Logout</a></li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                        <li><a><div class="flex">
+                            <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto rounded-full" />
+                          <img class="relative right-10" src="./images/search.png" alt="">
+                          </div></a></li>
+                      </ul>
+                    </div>
+                  </div>
             </div>
         </nav>
         <!-- Banner section -->
@@ -136,8 +152,8 @@
                     </div>
                 </div>
                 <!-- Fruits badge -->
-                <div
-                    class=" max-w-5xl bg-white rounded-lg flex justify-between px-16 py-12 relative left-40 bottom-28 drop-shadow-lg">
+                <div class="lg:block hidden">
+                <div class=" max-w-5xl bg-white rounded-lg flex justify-between px-16 py-12 relative left-40 bottom-28 drop-shadow-lg">
                     <div>
                         <img src="./images/fruit1.png" alt="">
                         <p class="text-[#121212] text-xl font-medium text-center">Grapes</p>
@@ -554,7 +570,7 @@
         </section>
         <!-- Meet The team section -->
         <section class="mt-36">
-            <div class="container mx-auto bg-[url('./images/banner1.png')] bg-no-repeat rounded-lg">
+            <div class="container mx-auto h-auto bg-[url('./images/banner1.png')] bg-no-repeat rounded-lg">
                 <div class="pt-28 max-w-2xl mx-auto text-white text-center">
                     <h2 class=" text-5xl font-extrabold ">Meet the team section</h2>
                     <p class="font-medium mt-6 mb-12">Contrary to popular belief, is not simply random text. It has roots in a
